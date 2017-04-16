@@ -1,6 +1,7 @@
 import ComposeFormContainer from './containers/compose_form_container';
 import UploadFormContainer from './containers/upload_form_container';
 import NavigationContainer from './containers/navigation_container';
+import ConnectAccountContainer from '../niconico/containers/connect_account_container';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { mountCompose, unmountCompose } from '../../actions/compose';
@@ -58,6 +59,7 @@ class Compose extends React.PureComponent {
         <div className='drawer__pager'>
           <div className='drawer__inner'>
             <NavigationContainer />
+            <ConnectAccountContainer />
             <ComposeFormContainer />
           </div>
 
