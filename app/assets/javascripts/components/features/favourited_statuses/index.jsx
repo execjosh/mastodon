@@ -45,7 +45,7 @@ class Favourites extends React.PureComponent {
     }
 
     return (
-      <Column icon='star' heading={intl.formatMessage(messages.heading)}>
+      <Column icon='nicoru--column' heading={intl.formatMessage(messages.heading)}>
         <ColumnBackButtonSlim />
         <StatusList {...this.props} onScrollToBottom={this.handleScrollToBottom} />
       </Column>
