@@ -51,8 +51,13 @@ class IconButton extends React.PureComponent {
       classes.push(this.props.className)
     }
 
+    let rotateDeg = 0;
+    if (this.props.active) {
+      rotateDeg = this.props.icon === 'nicoru--status' ? -450 : -360;
+    }
+
     return (
-      <Motion defaultStyle={{ rotate: this.props.active ? -360 : 0 }} style={{ rotate: this.props.animate ? spring(this.props.active ? -360 : 0, { stiffness: 120, damping: 7 }) : 0 }}>
+      <Motion defaultStyle={{ rotate: rotateDeg }} style={{ rotate: this.props.animate ? spring(rotateDeg : 0, { stiffness: 120, damping: 7 }) : 0 }}>
         {({ rotate }) =>
           <button
             aria-label={this.props.title}
@@ -60,7 +65,7 @@ class IconButton extends React.PureComponent {
             className={classes.join(' ')}
             onClick={this.handleClick}
             style={style}>
-            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${this.props.icon}`} aria-hidden='true' />
+            <i style={{ transform: `rotate(${rotate}deg)` }} className={`fa fa-fw fa-${this.props.icon} ${this.props.active ? 'active' : 'inactive'}`} aria-hidden='true' />
           </button>
         }
       </Motion>
