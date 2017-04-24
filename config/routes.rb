@@ -65,6 +65,8 @@ Rails.application.routes.draw do
       resource :confirmation, only: [:new, :create]
     end
 
+    resource :oauth, only: [:show, :update, :destroy]
+
     resource :follower_domains, only: [:show, :update]
   end
 
