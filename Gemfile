@@ -106,6 +106,3 @@ group :production do
 end
 
 gem 'omniauth-niconico'
-group :development do
-  gem 'capistrano3-puma'
-end
