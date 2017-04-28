@@ -38,7 +38,7 @@ const GettingStarted = ({ intl, me }) => {
       <div className='getting-started__wrapper'>
         <ColumnSubheading text={intl.formatMessage(messages.navigation_subheading)}/>
         <ColumnLink icon='users' hideOnMobile={true} text={intl.formatMessage(messages.community_timeline)} to='/timelines/public/local' />
-        <ColumnLink text='ニコニコ形式' href='/nicomment' external={true} />
+        <ColumnLink icon='nico' text='ニコニコ形式' href='/nicomment' external={true} />
         <ColumnLink icon='globe' hideOnMobile={true} text={intl.formatMessage(messages.public_timeline)} to='/timelines/public' />
         <ColumnLink icon='nicoru--column' text={intl.formatMessage(messages.favourites)} to='/favourites' />
         {followRequests}
